@@ -1,29 +1,55 @@
-<div align="center">
+# Conway's Game of Life
 
-  <h1><code>wasm_game_of_life</code></h1>
+This is a demo app of Conway's Game of Life written in Rust and running as a web app in the browser via wasm and web assembly.
 
-  <strong>Conway's Game of Life in Rust and WebAssembly</strong>
+## Setup
 
-  <p>
-    <a href="https://travis-ci.org/rustwasm/wasm_game_of_life"><img src="https://img.shields.io/azure-devops/build/rustwasm/gloo/6.svg?style=flat-square" alt="Build Status" /></a>
-  </p>
+Install [wasm-pack](https://rustwasm.github.io/wasm-pack/book/)
 
-  <h3>
-    <a href="https://github.com/rustwasm/book/blob/master/CONTRIBUTING.md">Contributing</a>
-    <span> | </span>
-    <a href="https://discordapp.com/channels/442252698964721669/443151097398296587">Chat</a>
-  </h3>
+```
+curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+```
 
-  <sub>Built with 🦀🕸 by <a href="https://rustwasm.github.io/">The Rust and WebAssembly Working Group</a></sub>
-</div>
+Install [cargo-generate](https://github.com/ashleygwilliams/cargo-generate)
 
-## About
+```
+cargo install cargo-generate
+```
 
-This repository contains the complete code for the Rust and WebAssembly
-tutorial. The tutorial builds increasingly featureful implementations of
-[Conway's Game of Life][game-of-life].
+## Installation
 
-### [Read the tutorial here!][tutorial]
+First clone the repo
 
-[game-of-life]: https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
-[tutorial]: https://rustwasm.github.io/book/game-of-life/introduction.html
+```
+git clone https://github.com/cgcardona/game-of-life.git
+```
+
+Next change directories
+
+```
+cd game-of-life
+```
+
+Now build the app and deps
+
+```
+cargo build
+```
+
+Build web assets
+
+```
+wasm-pack build
+```
+
+Change directories, install web deps and run the app
+
+```
+cd www
+npm install
+npm run start
+```
+
+Open the browser to [http://localhost:8080/](http://localhost:8080/) and have your mind blown!
+
+[Example gif](https://i.imgur.com/94uQuHT.mp4)
