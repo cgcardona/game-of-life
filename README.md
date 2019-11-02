@@ -10,12 +10,6 @@ Install [wasm-pack](https://rustwasm.github.io/wasm-pack/book/)
 curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
 ```
 
-Install [cargo-generate](https://github.com/ashleygwilliams/cargo-generate)
-
-```
-cargo install cargo-generate
-```
-
 ## Installation
 
 First clone the repo
